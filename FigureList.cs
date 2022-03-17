@@ -1,19 +1,19 @@
-﻿class FiguresList
+class FiguresList
 {
-    private Dot[] FiguresArray = new Dot[6];
-    private int pos = 0;
+    private List<Dot> FigList = new List<Dot>();
 
-    public void AddFigureToList(Dot Figure)
+    public void AddToList(Dot Figure)
     {
-        FiguresArray[pos] = Figure;
-        pos++;
+        FigList.Add(Figure);
     }
-    public void PrintFigures(Render Rn)
+
+    public void PrintList(Render Rn)
     {
-        while(pos > 0)
+        int i = 0;
+        while(i < FigList.Count)
         {
-            pos--;
-            System.Console.WriteLine(Rn.FrameRendering(FiguresArray[pos].IsFigure));
+            System.Console.WriteLine(Rn.FrameRendering(FigList[i].IsFigure));
+            i++;
         }
     }
 }
