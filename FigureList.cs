@@ -9,11 +9,9 @@ class FiguresList
 
     public void PrintList(Render Rn)
     {
-        int i = 0;
-        while(i < FigList.Count)
+        for(int i =0, len = FigList.Count; i < len; i++)
         {
             System.Console.WriteLine(Rn.FrameRendering(FigList[i].IsFigure));
-            i++;
         }
     }
 }
